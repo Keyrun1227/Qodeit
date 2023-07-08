@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Qodeit/static/css/main.719d01a3.css",
+    "main.js": "/Qodeit/static/js/main.d92cecfd.js",
+    "static/js/787.74ef4986.chunk.js": "/Qodeit/static/js/787.74ef4986.chunk.js",
+    "index.html": "/Qodeit/index.html",
+    "main.719d01a3.css.map": "/Qodeit/static/css/main.719d01a3.css.map",
+    "main.d92cecfd.js.map": "/Qodeit/static/js/main.d92cecfd.js.map",
+    "787.74ef4986.chunk.js.map": "/Qodeit/static/js/787.74ef4986.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.719d01a3.css",
+    "static/js/main.d92cecfd.js"
+  ]
+}
