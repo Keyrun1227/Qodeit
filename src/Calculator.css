@@ -1,0 +1,526 @@
+
+:root {
+    --default-bg: #fcfbff;
+    
+    --primary-color: #d7c6f3;
+    --primary-text: #231833;
+  
+    --secondary-color: #1d1d1d;
+    --secondary-text: #fbf9ff;
+    --secondary-color-opacity: #13111857;
+    
+    --tertiary-color: #c1c1ff;
+    --btn-color: #9a71e0;
+    --btn-border: #28193b;
+    --btn-active: #34244c;
+  
+    --calculator-background: #ffffff;
+    --calculator-btn-bg: #9376be;
+    --calculator-input-border: #cfcfcfde;
+  
+    --cta-btn: #ffc966;
+    --cta-btn-dark: #f1b33e;
+  
+    --date-container-color: #d7bcff;
+  }
+
+  
+  body {
+    background-color: var(--default-bg);
+  }
+
+  
+.calculator-c {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 100px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border-radius: 15px;
+    z-index: 19;
+    padding: 40px 20px;
+    box-shadow: 0 0 30px 0 #00000020;
+    background-color:var(--calculator-background);
+  }
+  
+  .calculator::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+  }
+  
+  .calculator-c .calculator-text img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #top-tier {
+    margin: 20px 0;
+  
+  }
+  
+  .tier {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .btn-tier {
+    padding: 12px 16px;
+    color: var(--secondary-text);
+    background-color: var(--calculator-btn-bg);
+    position: relative;
+    border-radius: 12px;
+    font-size: 17px;
+  
+    cursor: pointer;
+  }
+  
+  .btn-tier::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 6px;
+    left: 6px;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    transition: all 0.2s;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .quantity-c {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 17px;
+  }
+  
+  .pw-ip-c p {
+    text-align: start;
+    font-size: 16px;
+    color: var(--primary-text) !important;
+  }
+  
+  .quantity {
+    width: 50%;
+  }
+  
+  .quantity input {
+    color: var(--primary-text);
+    padding: 7px;
+    margin: 3px 0 8px 0;
+    border: 1px solid var(--calculator-input-border);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .pw {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .pw div {
+    width: 100%;
+    padding: 10px 20px;
+    color: var(--secondary-text);
+    background-color: var(--calculator-btn-bg);
+    position: relative;
+    border-radius: 12px;
+    font-size: 17px;
+  }
+  
+  .pw div::after {
+    /* content: ""; */
+    position: absolute;
+    width: 100%;
+    background-color: var(--secondary-color);
+    height: 100%;
+    top: 5px;
+    left: 5px;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    z-index: -1;
+    transition: all 0.2s;
+  }
+  
+  .calen-c p {
+    text-align: start;
+    color: var(--primary-text) !important;
+    font-size: 16px;
+  }
+  
+  .react-datepicker__input-container {
+    cursor: pointer;
+  }
+  
+  .react-datepicker__input-container input {
+    padding: 9px 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    font-size: 18px;
+    color: var(--primary-text);
+    border: 1px solid var(--calculator-input-border);
+  }
+  
+  .react-datepicker__month-container,
+  .react-datepicker__header,
+  .react-datepicker__day-names {
+    background-color: var(--date-container-color) !important;
+    color: var(--secondary-color) !important;
+  }
+  
+
+  .react-datepicker__day,
+  .react-datepicker__current-month,
+  .react-datepicker__day-name {
+    color: var(--secondary-color) !important;
+  }
+  
+  .react-datepicker__day:hover {
+    background: var(--tertiary-color);
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: #fff !important;
+  }
+  
+  .price-c {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .price-main {
+    font-size: 12px;
+    color: var(--secondary-color-opacity);
+  }
+  
+  .order-btn button {
+    width: 100%;
+    cursor: pointer;
+    padding: 18px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--primary-text);
+    background-color: var(--cta-btn);
+    border-radius: 15px;
+    transition: all 0.3s;
+  }
+  
+  .order-btn button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 0  #00000030;
+  }
+  
+  .paper-select {
+    width: 100%;
+    margin: 5% 0;
+  }
+  
+  .paper-select p {
+    text-align: start;
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  
+  
+  .css-1s2u09g-control {
+    color: var(--primary-text) !important;
+    font-size: 18px;
+    padding: 2px;
+    border-radius: 10px !important;
+    margin: 0 auto;
+    max-width: 590px;
+  }
+  
+  .css-1pahdxg-control {
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    color: var(--primary-text);
+    font-size: 18px;
+  }
+  
+  .price {
+    color: var(--primary-text);
+    border-radius: 12px;
+    padding-top: 6px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .highlight {
+    color: var(--btn-active) !important;
+    border-radius: 12px;
+    font-size: 17px;
+  }
+  
+  .calculator-text {
+    position: relative;
+    color: var(--primary-text);
+  }
+  
+  .calculator-text img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    right: 0%;
+    width: 90%;
+    height: auto;
+  }
+  
+  .calculator-text h2 {
+    font-size: 50px;
+    margin: 12px 0px;
+  }
+  
+  .calculator-text p {
+    font-size: 18px;
+    margin: 12px 0px;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    outline: none;
+    color: #0e0d27;
+  }
+  
+  body {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-color);
+  }
+  
+  button {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
+  .logo img {
+    width: 30%;
+    height: auto;
+    margin: 0 10px;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #5c4486;
+  }
+  
+  video {
+    width: 100%;
+    border-radius: 14px;
+  }
+  
+  input {
+    outline: none;
+    border: none;
+  }
+  
+  .btn {
+    font-size: 17px;
+    padding: 15px 30px;
+    background-color: var(--cta-btn);
+    color: var(--secondary-color);
+    outline: none;
+    border: none;
+    border-radius: 12px;
+  }
+  
+  @media screen and (max-width: 1500px) {
+    .head-sec .stats-section {
+      left: 3%;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+  
+    body .calculator-c {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .calculator-c .calculator {
+      padding: 20px 10px;
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .calculator-text {
+      margin-bottom: 4%;
+    }
+  
+    .calculator .paper-select {
+      margin: 10px 0;
+    }
+  
+  
+    .calculator-text img {
+      display: none;
+    }
+  
+  }
+  
+  @media screen and (max-width: 920px) {
+  
+    body .calculator-c {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .calculator-c .calculator .btn-tier {
+      padding: 12px;
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .calculator-c .calculator .react-datepicker__input-container input {
+      padding: 5% 10px;
+      font-weight: 600;
+      border-radius: 10px;
+      font-size: 100%;
+      color: var(--primary-text);
+      width: 80%;
+    }
+  
+    .calculator-c .calculator-text h2 {
+      font-size: 30px;
+    }
+  
+    .calculator-c .calculator-text p {
+      font-size: 15px;
+    }
+  
+    .calculator-c .tier .btn-tier {
+      padding: 10px;
+    }
+  
+    .pw-ip-c .pw-c .pw div {
+      font-size: 12px;
+    }
+  
+    .calculator .price-c .order-btn button {
+      font-size: 13px;
+      padding: 12px;
+    }
+  
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+
+  
+    .calculator {
+      width: 100% !important;
+    }
+  
+    .calculator-c .calculator .tier div p {
+      font-size: 12px;
+    }
+  
+    
+  }
+  
+  @media screen and (max-width: 450px) {
+    .main-img {
+      display: none;
+    }
+    .main-img img {
+      display: none;
+    }
+  
+    .calculator-c .calculator .tier {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-content: center;
+      /* border: 2px solid var(--primary-color); */
+      padding: 8px;
+      border-radius: 12px;
+    }
+  
+    .calculator-c .calculator .tier .btn-tier {
+      padding: 7px;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+  
+    .calculator-c .calculator .tier .btn-tier:after {
+      display: none;
+    }
+  
+  
+    .calculator-c .calculator .quantity-c {
+      margin: 0;
+    }
+  
+    
+  }
+  
+  @media screen and (max-width: 340px) {
+    .calculator-c .calculator {
+      border: none;
+    }
+    .calculator-c .calculator .tier {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-content: center;
+      background-color: var(--secondary-color);
+      border: 2px solid var(--primary-color);
+      padding: 8px;
+      border-radius: 12px;
+    }
+  }
+  
+  
